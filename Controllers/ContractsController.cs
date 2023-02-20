@@ -1,12 +1,4 @@
-﻿using MetalHive.Data.DataModel.DTO;
-using MetalHive.Data.DataServices.Interfaces;
-using MetalHive.Data.DataServices;
-using Microsoft.AspNetCore.Mvc;
-using MetalHive.Data.DataModel;
-using MetalHive.Data.DataModel.Tables;
-using Microsoft.EntityFrameworkCore;
-
-namespace MetalHive.Controllers
+﻿namespace MetalHive.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

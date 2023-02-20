@@ -1,0 +1,9 @@
+﻿global using MetalHive.Utilities.Enums;
+global using MetalHive.Data.DataModel;
+global using Microsoft.EntityFrameworkCore;
+global using MetalHive.Data.DataModel.DTO;
+global using MetalHive.Data.DataModel.Tables;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using MetalHive.Data.DataServices.Interfaces;
+global using Microsoft.AspNetCore.Mvc;

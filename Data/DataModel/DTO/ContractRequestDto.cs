@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace MetalHive.Data.DataModel.DTO
+﻿namespace MetalHive.Data.DataModel.DTO
 {
     public class ContractRequestDto
     {

@@ -1,21 +1,5 @@
-﻿using MetalHive.Data.DataModel;
-using MetalHive.Data.DataModel.DTO;
-using MetalHive.Data.DataModel.Tables;
-using MetalHive.Data.DataServices.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-
-namespace MetalHive.Data.DataServices
+﻿namespace MetalHive.Data.DataServices
 {
-    public enum ContractValidationError
-    {
-        None = 0,
-        EquipmentTypeDoesntExist = 1,
-        ProductionFacilityDoesntExist = 2,
-        ProductionFacilityIsAlreadyTaken = 3,
-        InsufficientProductionSpace = 4
-    }
-
     public class ContractDataService : IContractDataService
     {
         private readonly MetalHiveDbContext _metalhiveDbContext;
@@ -46,9 +30,7 @@ namespace MetalHive.Data.DataServices
                 EquipmentCount = contract.EquipmentCount,
                 EquipmentId = contract.EquipmentId,
             };
-
         }
-
 
         public async Task<ContractValidationError> ValidateContract(ContractRequestDto contractRequestDto)
         {
@@ -105,7 +87,6 @@ namespace MetalHive.Data.DataServices
             _metalhiveDbContext.Dispose();
             GC.SuppressFinalize(this);
         }
-
         
     }
 }

@@ -1,7 +1,4 @@
-﻿using MetalHive.Data.DataModel.Tables;
-using Microsoft.EntityFrameworkCore;
-
-namespace MetalHive.Data.DataModel
+﻿namespace MetalHive.Data.DataModel
 {
     public class MetalHiveDbContext : DbContext
     {

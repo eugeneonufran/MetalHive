@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-
-namespace MetalHive.Data.DataModel.Tables
+﻿namespace MetalHive.Data.DataModel.Tables
 {
     public class ProductionFacility
     {

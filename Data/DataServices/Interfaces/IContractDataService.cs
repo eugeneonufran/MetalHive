@@ -1,8 +1,4 @@
-﻿using MetalHive.Data.DataModel.DTO;
-using MetalHive.Data.DataModel.Tables;
-using Microsoft.AspNetCore.Mvc;
-
-namespace MetalHive.Data.DataServices.Interfaces
+﻿namespace MetalHive.Data.DataServices.Interfaces
 {
     public interface IContractDataService : IDisposable
     {
