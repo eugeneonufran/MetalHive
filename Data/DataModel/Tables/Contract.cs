@@ -27,4 +27,4 @@ namespace MetalHive.Data.DataModel.Tables
 
     }
 }
-}
+

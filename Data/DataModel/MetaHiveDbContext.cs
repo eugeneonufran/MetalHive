@@ -32,6 +32,20 @@ namespace MetalHive.Data.DataModel
                     Id = 2,
                     Name = "Samson 200",
                     Footprint = 60.0f
+                },
+
+                new Equipment
+                {
+                    Id = 3,
+                    Name = "Herc - X",
+                    Footprint = 19.0f
+                },
+
+                new Equipment
+                {
+                    Id = 4,
+                    Name = "Foxxer 8000",
+                    Footprint = 250.0f
                 }
             );
 
@@ -49,6 +63,13 @@ namespace MetalHive.Data.DataModel
                     Id = 2,
                     Name = "Zhytomyr Factory 1",
                     NormativeEquipmentArea = 1000.0f
+                },
+
+                new ProductionFacility
+                {
+                    Id = 3,
+                    Name = "Volyn",
+                    NormativeEquipmentArea = 5000.0f
                 }
             );
 
@@ -58,10 +79,19 @@ namespace MetalHive.Data.DataModel
                 new Contract
                 {
                     Id = 1,
-                    EquipmentCount = 1,
+                    EquipmentCount = 4,
                     EquipmentId = 1,
                     ProductionFacilityId = 1,
                     ClientName = "Lucy",
+                },
+
+                new Contract
+                {
+                    Id = 2,
+                    EquipmentCount = 4,
+                    EquipmentId = 2,
+                    ProductionFacilityId = 2,
+                    ClientName = "Maksym",
                 }
             );
 
