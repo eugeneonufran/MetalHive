@@ -2,6 +2,7 @@
 using MetalHive.Data.DataModel.DTO;
 using MetalHive.Data.DataModel.Tables;
 using MetalHive.Data.DataServices.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace MetalHive.Data.DataServices
@@ -81,11 +82,30 @@ namespace MetalHive.Data.DataServices
             return ContractValidationError.None;
         }
 
+        public async Task<List<ContractResponseDto>> GetContracts()
+        {
+            var contracts = await _metalhiveDbContext.Contracts
+                .Include(c => c.ProductionFacility)
+                .Include(c => c.Equipment)
+                .Select(c => new ContractResponseDto
+                {
+                    Id= c.Id,
+                    ClientName = c.ClientName,
+                    ProductionFacilityId = c.ProductionFacility.Id,
+                    EquipmentId = c.Equipment.Id,
+                    EquipmentCount = c.EquipmentCount
+                })
+                .ToListAsync();
+
+            return contracts;
+        }
+
         public void Dispose()
         {
             _metalhiveDbContext.Dispose();
             GC.SuppressFinalize(this);
         }
 
+        
     }
 }

@@ -56,26 +56,12 @@ namespace MetalHive.Controllers
         [HttpGet]
         public async Task<ActionResult<IQueryable<Contract>>> GetContracts()
         {
-            try
-            {
-                var contracts = await _context.Contracts
-                .Include(c => c.ProductionFacility)
-                .Include(c => c.Equipment)
-                .Select(c => new
-                {
-                    c.ClientName,
-                    ProductionFacilityName = c.ProductionFacility.Name,
-                    EquipmentTypeName = c.Equipment.Name,
-                    c.EquipmentCount
-                })
-                .ToListAsync();
 
-                return Ok(contracts);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex);
-            }
+            var contracts = await _contractDataService.GetContracts();
+
+            return Ok(contracts);
+
+
         }
 
         protected void Dispose()
