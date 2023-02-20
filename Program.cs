@@ -19,7 +19,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-var connectionString = builder.Configuration.GetConnectionString("ConStr");
+var connectionString = builder.Configuration.GetConnectionString("AzureDB");
 builder.Services.AddDbContext<MetalHiveDbContext>(x => x.UseSqlServer(connectionString));
 builder.Services.AddTransient<IContractDataService, ContractDataService>();
 
