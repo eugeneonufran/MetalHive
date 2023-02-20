@@ -1,4 +1,6 @@
 using MetalHive.Data.DataModel;
+using MetalHive.Data.DataServices.Interfaces;
+using MetalHive.Data.DataServices;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +15,7 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("ConStr");
 builder.Services.AddDbContext<MetalHiveDbContext>(x => x.UseSqlServer(connectionString));
-
+builder.Services.AddTransient<IContractDataService, ContractDataService>();
 
 var app = builder.Build();
 
