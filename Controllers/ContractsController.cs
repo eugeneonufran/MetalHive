@@ -14,7 +14,7 @@
         }
 
         [HttpPost]
-        public async Task<ActionResult<Contract>> CreateContract(ContractRequestDto contractRequestDto)
+        public async Task<ActionResult<ContractResponseDto>> CreateContract(ContractRequestDto contractRequestDto)
         {
             if (!ModelState.IsValid)
             {
@@ -46,7 +46,7 @@
 
 
         [HttpGet]
-        public async Task<ActionResult<IQueryable<Contract>>> GetContracts()
+        public async Task<ActionResult<IEnumerable<ContractResponseDto>>> GetContracts()
         {
 
             var contracts = await _contractDataService.GetContracts();

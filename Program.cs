@@ -25,6 +25,7 @@ builder.Services.AddTransient<IContractDataService, ContractDataService>();
 
 var app = builder.Build();
 
+
 app.UseSwagger();
 app.UseSwaggerUI();
 
