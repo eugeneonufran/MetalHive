@@ -20,7 +20,7 @@ To run this application, you will need:
 1. Clone the repository to your local machine.
 
 ```
-git clone https://github.com/your-username/metalhive-api.git
+git clone https://github.com/eugeneonufran/metalhive-api.git
 ```
 
 2. Navigate to the project directory and restore packages.
